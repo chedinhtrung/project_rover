@@ -1,0 +1,7 @@
+venv
+Test3
+.vscode
+__pycache__/
+config.py
+ffmpeg
+confidential.py
