@@ -75,7 +75,7 @@ class MapDisplay(QWebEngineView):
         map_path = os.path.join(local_path, relative_path)
         #self.load(QUrl.fromLocalFile(map_path))
         html = self.load_html_with_api_key(map_path, GGMAP_API_KEY)
-        self.setHtml(html)
+        self.setHtml(html, QUrl.fromLocalFile(map_path))            # Needs map_path as base URL to resolve resource locations
         self.last_update = time.time()
 
     def updateDroneLocation(self, data):
